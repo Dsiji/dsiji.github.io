@@ -11324,8 +11324,8 @@ p {
   padding-right: 200px;
 }
 .page-section .rounded-circle{
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
 }
 
 @media (min-width: 768px) {
