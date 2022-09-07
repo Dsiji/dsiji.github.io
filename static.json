@@ -1,9 +1,0 @@
-{
-    "root": "dist/",
-    "encoding": "US-ASCII",
-    "routes": {
-        "/assets/*": "/assets/",
-        "/css/*": "/css/",
-        "/**": "index.html"
-    }
-}
