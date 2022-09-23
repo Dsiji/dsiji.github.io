@@ -11456,7 +11456,7 @@ header.masthead-about {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/about/AboutLandingPageDsiji.png");
+  background-image: url("../assets/about/AboutDsiji_top.webp");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11469,7 +11469,7 @@ header.masthead-about {
   margin-top: -0.1rem;
 }
 .page-visimisi {
-  background-image: url("../assets/about/AboutLandingPageDsiji\(3\).png");
+  background-image: url("../assets/about/AboutDsiji_bottom.webp");
   padding: 7rem;
   background-size: cover;
 }
