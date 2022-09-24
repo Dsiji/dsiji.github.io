@@ -1,38 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Your Tech Bussines Partner</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <?php 
-            include_once("index_component/masthead.html"); 
-            include_once("index_component/about.html");
-            include_once("index_component/service.html");
-            include_once("index_component/contact_us.html");
-            include_once("index_component/footer.html");
-        ?>
+<?php
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
-</html>
+require_once("{$_SERVER['DOCUMENT_ROOT']}/router.php");
+
+// ##################################################
+// ##################################################
+// ##################################################
+
+// Static GET
+// In the URL -> http://localhost
+// The output -> Index
+get('/', 'views/home.php');
+
+// Dynamic GET. Example with 1 variable
+// The $id will be available in user.php
+get('/about', 'views/about.php');
+
+// Dynamic GET. Example with 2 variables
+// The $name will be available in user.php
+// The $last_name will be available in user.php
+// get('/user/$name/$last_name', 'user.php');
+
+// Dynamic GET. Example with 2 variables with static
+// In the URL -> http://localhost/product/shoes/color/blue
+// The $type will be available in product.php
+// The $color will be available in product.php
+// get('/product/$type/color/:color', 'product.php');
+
+// Dynamic GET. Example with 1 variable and 1 query string
+// In the URL -> http://localhost/item/car?price=10
+// The $name will be available in items.php which is inside the views folder
+// get('/item/$name', 'views/items.php');
+
+
+// ##################################################
+// ##################################################
+// ##################################################
+// any can be used for GETs or POSTs
+
+// For GET or POST
+// The 404.php which is inside the views folder will be called
+// The 404.php has access to $_GET and $_POST
+// any('/404','views/404.php');
