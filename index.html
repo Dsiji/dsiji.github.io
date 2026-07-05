@@ -1,292 +1,792 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Dsiji — Digital Product Studio. Mitra transformasi digital Anda." />
-  <title>Dsiji — Digital Product Studio</title>
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Dsiji — Digital Product Studio. Mitra transformasi digital Anda."
+        />
+        <title>Dsiji — Digital Product Studio</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- ======== SIDEBAR ======== -->
+        <nav class="sidebar" id="sidebar" aria-label="Navigasi utama">
+            <div class="sidebar__inner">
+                <!-- Logo -->
+                <a href="#home" class="sidebar__logo">
+                    <img
+                        src="assets/img/logodsiji.png"
+                        alt="Dsiji"
+                        class="sidebar__logo-img"
+                        width="120"
+                        height="56"
+                    />
+                </a>
 
-  <!-- ======== SIDEBAR ======== -->
-  <nav class="sidebar" id="sidebar" aria-label="Navigasi utama">
-    <div class="sidebar__inner">
-      <!-- Logo -->
-      <a href="#home" class="sidebar__logo">
-        <svg class="sidebar__logo-mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <rect x="2" y="2" width="28" height="28" rx="6" stroke="#2563EB" stroke-width="2.5" fill="none"/>
-          <path d="M10 22V10h4l4 6 4-6h4v12h-4V16l-4 6-4-6v6H10z" fill="#2563EB"/>
-        </svg>
-        <span class="sidebar__logo-text">DSIJI</span>
-      </a>
+                <!-- Nav links -->
+                <ul class="sidebar__nav">
+                    <li>
+                        <a
+                            href="#home"
+                            class="sidebar__link is-active"
+                            data-section="home"
+                            >Beranda</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#portfolio"
+                            class="sidebar__link"
+                            data-section="portfolio"
+                            >Portofolio</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#stack"
+                            class="sidebar__link"
+                            data-section="stack"
+                            >Stack</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#contact"
+                            class="sidebar__link"
+                            data-section="contact"
+                            >Kontak</a
+                        >
+                    </li>
+                </ul>
 
-      <!-- Nav links -->
-      <ul class="sidebar__nav">
-        <li><a href="#home" class="sidebar__link is-active" data-section="home">Beranda</a></li>
-        <li><a href="#portfolio" class="sidebar__link" data-section="portfolio">Portofolio</a></li>
-        <li><a href="#stack" class="sidebar__link" data-section="stack">Stack</a></li>
-        <li><a href="#contact" class="sidebar__link" data-section="contact">Kontak</a></li>
-      </ul>
-
-      <!-- Social icons at bottom of sidebar (desktop) -->
-      <div class="sidebar__social">
-        <a href="https://instagram.com/dsiji_corp" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <a href="https://www.facebook.com/Dsiji-104571762354979/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/dsiji/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <!-- Hamburger button (mobile) -->
-    <button class="sidebar__toggle" id="menuToggle" aria-expanded="false" aria-label="Buka menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- Mobile overlay -->
-  <div class="sidebar__overlay" id="menuOverlay"></div>
-
-  <!-- ======== MAIN CONTENT ======== -->
-  <main class="main">
-
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero__pattern" aria-hidden="true"></div>
-      <div class="hero__inner">
-        <p class="hero__eyebrow">DSIJI &bull; Digital Product Studio</p>
-        <h1 class="hero__title" id="hero-title">
-          Partner Anda dalam<br />
-          <span class="hero__title-accent">Transformasi Digital</span>
-        </h1>
-        <p class="hero__sub">
-          Kami merancang dan membangun aplikasi web operasional yang dipakai
-          bisnis nyata—dari peternakan, kuliner, hingga transportasi.
-        </p>
-        <div class="hero__actions">
-          <a href="#portfolio" class="btn btn--primary">Lihat Portofolio</a>
-          <a href="#contact" class="btn btn--outline">Hubungi Kami</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== PORTFOLIO ===== -->
-    <section class="section" id="portfolio" aria-labelledby="portfolio-title">
-      <div class="section__inner">
-        <div class="section__header">
-          <h2 class="section__title" id="portfolio-title">Featured Portfolio</h2>
-        </div>
-
-        <div class="portfolio__grid">
-
-          <!-- Eggies -->
-          <article class="card">
-            <div class="card__frame">
-              <div class="card__frame-bar"><span></span><span></span><span></span></div>
-              <img
-                class="card__frame-img"
-                src="assets/img/eggies.webp"
-                alt="Eggies — Aplikasi operasional bisnis telur"
-                loading="lazy"
-                width="1200"
-                height="750"
-              />
+                <!-- Social icons at bottom of sidebar (desktop) -->
+                <div class="sidebar__social">
+                    <a
+                        href="https://instagram.com/dsiji_corp"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Instagram"
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <rect x="2" y="2" width="20" height="20" rx="5" />
+                            <path
+                                d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                            />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a
+                        href="https://www.facebook.com/Dsiji-104571762354979/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Facebook"
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                            />
+                        </svg>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/company/dsiji/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="LinkedIn"
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                            />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <div class="card__body">
-              <h3 class="card__title">Eggies</h3>
-              <p class="card__desc">Aplikasi operasional bisnis telur: produksi, stok &amp; batch, order, pengiriman, piutang, hingga traceability QR dalam satu alur kerja.</p>
-              <span class="card__tag">SaaS &bull; Operasional</span>
-              <a href="https://eggies.halozy.my.id" target="_blank" rel="noopener" class="btn btn--small btn--primary">Lihat Proyek</a>
-            </div>
-          </article>
 
-          <!-- Fisky -->
-          <article class="card">
-            <div class="card__frame">
-              <div class="card__frame-bar"><span></span><span></span><span></span></div>
-              <img
-                class="card__frame-img"
-                src="assets/img/fisky.webp"
-                alt="Fisky — Sistem operasi budidaya lele"
-                loading="lazy"
-                width="1200"
-                height="750"
-              />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">Fisky</h3>
-              <p class="card__desc">Sistem operasi budidaya lele: pantau kualitas air, pakan (FCR), biomassa, panen, dan keuangan dalam satu dashboard.</p>
-              <span class="card__tag">SaaS &bull; Agritech</span>
-              <a href="https://fisky.halozy.my.id" target="_blank" rel="noopener" class="btn btn--small btn--primary">Lihat Proyek</a>
-            </div>
-          </article>
+            <!-- Hamburger button (mobile) -->
+            <button
+                class="sidebar__toggle"
+                id="menuToggle"
+                aria-expanded="false"
+                aria-label="Buka menu"
+            >
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
 
-          <!-- Breadest -->
-          <article class="card">
-            <div class="card__frame">
-              <div class="card__frame-bar"><span></span><span></span><span></span></div>
-              <img
-                class="card__frame-img"
-                src="assets/img/breadest.webp"
-                alt="Breadest — Web app untuk bisnis bakery"
-                loading="lazy"
-                width="1200"
-                height="750"
-              />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">Breadest</h3>
-              <p class="card__desc">Web app untuk bisnis bakery/roti—katalog dan pengelolaan pesanan.</p>
-              <span class="card__tag">Web App &bull; F&amp;B</span>
-              <a href="https://breadest.halozy.my.id" target="_blank" rel="noopener" class="btn btn--small btn--primary">Lihat Proyek</a>
-            </div>
-          </article>
+        <!-- Mobile overlay -->
+        <div class="sidebar__overlay" id="menuOverlay"></div>
 
-          <!-- TODO: Ganti screenshot Breadest dengan screenshot live jika situs sudah pulih -->
+        <!-- ======== MAIN CONTENT ======== -->
+        <main class="main">
+            <!-- ===== HERO ===== -->
+            <section class="hero" id="home" aria-labelledby="hero-title">
+                <div class="hero__pattern" aria-hidden="true"></div>
+                <div class="hero__inner">
+                    <p class="hero__eyebrow">
+                        DSIJI &bull; Digital Product Studio
+                    </p>
+                    <h1 class="hero__title" id="hero-title">
+                        Partner Anda dalam<br />
+                        <span class="hero__title-accent"
+                            >Transformasi Digital</span
+                        >
+                    </h1>
+                    <p class="hero__sub">
+                        Kami merancang dan membangun aplikasi web operasional
+                        yang dipakai bisnis nyata—dari peternakan, kuliner,
+                        hingga transportasi.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#portfolio" class="btn btn--primary"
+                            >Lihat Portofolio</a
+                        >
+                        <a href="#contact" class="btn btn--outline"
+                            >Hubungi Kami</a
+                        >
+                    </div>
+                </div>
+            </section>
 
-          <!-- Rinra Trans -->
-          <article class="card">
-            <div class="card__frame">
-              <div class="card__frame-bar"><span></span><span></span><span></span></div>
-              <img
-                class="card__frame-img"
-                src="assets/img/rainratrans.webp"
-                alt="Rinra Trans — Platform tiket bus travel rute Makassar–Mamuju–Palopo–Mangkutana"
-                loading="lazy"
-                width="1200"
-                height="750"
-              />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">Rinra Trans</h3>
-              <p class="card__desc">Platform tiket bus travel rute Makassar–Mamuju–Palopo–Mangkutana: cari jadwal, booking online, tracking armada, dan poin pelanggan.</p>
-              <span class="card__tag">Web App &bull; Transportasi</span>
-              <a href="https://rainratrans.halozy.my.id" target="_blank" rel="noopener" class="btn btn--small btn--primary">Lihat Proyek</a>
-            </div>
-          </article>
+            <!-- ===== PORTFOLIO ===== -->
+            <section
+                class="section"
+                id="portfolio"
+                aria-labelledby="portfolio-title"
+            >
+                <div class="section__inner">
+                    <div class="section__header">
+                        <h2 class="section__title" id="portfolio-title">
+                            Featured Portfolio
+                        </h2>
+                    </div>
 
-        </div>
-      </div>
-    </section>
+                    <div class="portfolio__grid">
+                        <!-- Eggies -->
+                        <article class="card">
+                            <div class="card__frame">
+                                <div class="card__frame-bar">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <img
+                                    class="card__frame-img"
+                                    src="assets/img/eggies.webp"
+                                    alt="Eggies — Aplikasi operasional bisnis telur"
+                                    loading="lazy"
+                                    width="1200"
+                                    height="750"
+                                />
+                            </div>
+                            <div class="card__body">
+                                <h3 class="card__title">Eggies</h3>
+                                <p class="card__desc">
+                                    Aplikasi operasional bisnis telur: produksi,
+                                    stok &amp; batch, order, pengiriman,
+                                    piutang, hingga traceability QR dalam satu
+                                    alur kerja.
+                                </p>
+                                <span class="card__tag"
+                                    >SaaS &bull; Operasional</span
+                                >
+                                <a
+                                    href="https://eggies.halozy.my.id"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="btn btn--small btn--primary"
+                                    >Lihat Proyek</a
+                                >
+                            </div>
+                        </article>
 
-    <!-- ===== STACK ===== -->
-    <section class="section section--alt" id="stack" aria-labelledby="stack-title">
-      <div class="section__inner">
-        <div class="section__header">
-          <h2 class="section__title" id="stack-title">Kedalaman Teknis<br />&amp; Stack Kami</h2>
-        </div>
-        <p class="stack__intro">Kami membangun di atas stack modern yang teruji di produksi—cepat, aman, dan mudah diskalakan.</p>
+                        <!-- Fisky -->
+                        <article class="card">
+                            <div class="card__frame">
+                                <div class="card__frame-bar">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <img
+                                    class="card__frame-img"
+                                    src="assets/img/fisky.webp"
+                                    alt="Fisky — Sistem operasi budidaya lele"
+                                    loading="lazy"
+                                    width="1200"
+                                    height="750"
+                                />
+                            </div>
+                            <div class="card__body">
+                                <h3 class="card__title">Fisky</h3>
+                                <p class="card__desc">
+                                    Sistem operasi budidaya lele: pantau
+                                    kualitas air, pakan (FCR), biomassa, panen,
+                                    dan keuangan dalam satu dashboard.
+                                </p>
+                                <span class="card__tag"
+                                    >SaaS &bull; Agritech</span
+                                >
+                                <a
+                                    href="https://fisky.halozy.my.id"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="btn btn--small btn--primary"
+                                    >Lihat Proyek</a
+                                >
+                            </div>
+                        </article>
 
-        <div class="stack__grid">
+                        <!-- Breadest -->
+                        <article class="card">
+                            <div class="card__frame">
+                                <div class="card__frame-bar">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <img
+                                    class="card__frame-img"
+                                    src="assets/img/breadest.webp"
+                                    alt="Breadest — Web app untuk bisnis bakery"
+                                    loading="lazy"
+                                    width="1200"
+                                    height="750"
+                                />
+                            </div>
+                            <div class="card__body">
+                                <h3 class="card__title">Breadest</h3>
+                                <p class="card__desc">
+                                    Web app untuk bisnis bakery/roti—katalog dan
+                                    pengelolaan pesanan.
+                                </p>
+                                <span class="card__tag"
+                                    >Web App &bull; F&amp;B</span
+                                >
+                                <a
+                                    href="https://breadest.halozy.my.id"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="btn btn--small btn--primary"
+                                    >Lihat Proyek</a
+                                >
+                            </div>
+                        </article>
 
-          <div class="stack__item">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M18 2L4 9v18l14 7 14-7V9L18 2z" stroke="#61DAFB" stroke-width="1.5" fill="none"/><circle cx="18" cy="18" r="5" fill="#61DAFB"/></svg>
-            <span class="stack__label">React</span>
-          </div>
+                        <!-- TODO: Ganti screenshot Breadest dengan screenshot live jika situs sudah pulih -->
 
-          <div class="stack__item">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect x="5" y="5" width="26" height="26" rx="3" stroke="#3178C6" stroke-width="1.5" fill="none"/><text x="18" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#3178C6">TS</text></svg>
-            <span class="stack__label">TypeScript</span>
-          </div>
+                        <!-- Rinra Trans -->
+                        <article class="card">
+                            <div class="card__frame">
+                                <div class="card__frame-bar">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <img
+                                    class="card__frame-img"
+                                    src="assets/img/rinratrans.webp"
+                                    alt="Rinra Trans — Platform tiket bus travel rute Makassar–Mamuju–Palopo–Mangkutana"
+                                    loading="lazy"
+                                    width="1200"
+                                    height="750"
+                                />
+                            </div>
+                            <div class="card__body">
+                                <h3 class="card__title">Rinra Trans</h3>
+                                <p class="card__desc">
+                                    Platform tiket bus travel rute
+                                    Makassar–Mamuju–Palopo–Mangkutana: cari
+                                    jadwal, booking online, tracking armada, dan
+                                    poin pelanggan.
+                                </p>
+                                <span class="card__tag"
+                                    >Web App &bull; Transportasi</span
+                                >
+                                <a
+                                    href="https://rinratrans.halozy.my.id"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="btn btn--small btn--primary"
+                                    >Lihat Proyek</a
+                                >
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-          <div class="stack__item">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M18 3L3 12v12l15 9 15-9V12L18 3z" stroke="#339933" stroke-width="1.5" fill="none"/><text x="18" y="23" text-anchor="middle" font-size="11" font-weight="700" fill="#339933">N</text></svg>
-            <span class="stack__label">Node.js</span>
-          </div>
+            <!-- ===== STACK ===== -->
+            <section
+                class="section section--alt"
+                id="stack"
+                aria-labelledby="stack-title"
+            >
+                <div class="section__inner">
+                    <div class="section__header">
+                        <h2 class="section__title" id="stack-title">
+                            Kedalaman Teknis<br />&amp; Stack Kami
+                        </h2>
+                    </div>
+                    <p class="stack__intro">
+                        Kami membangun di atas stack modern yang teruji di
+                        produksi—cepat, aman, dan mudah diskalakan.
+                    </p>
 
-          <div class="stack__item">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M18 3L3 12v12l15 9 15-9V12L18 3z" stroke="#646CFF" stroke-width="1.5" fill="none"/><text x="18" y="23" text-anchor="middle" font-size="10" font-weight="700" fill="#646CFF">V</text></svg>
-            <span class="stack__label">Vite</span>
-          </div>
+                    <div class="stack__grid">
+                        <div class="stack__item">
+                            <svg
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M18 2L4 9v18l14 7 14-7V9L18 2z"
+                                    stroke="#61DAFB"
+                                    stroke-width="1.5"
+                                    fill="none"
+                                />
+                                <circle cx="18" cy="18" r="5" fill="#61DAFB" />
+                            </svg>
+                            <span class="stack__label">React</span>
+                        </div>
 
-          <div class="stack__item">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><ellipse cx="18" cy="12" rx="13" ry="6" stroke="#4169E1" stroke-width="1.5" fill="none"/><path d="M5 12v6c0 3.314 5.82 6 13 6s13-2.686 13-6v-6" stroke="#4169E1" stroke-width="1.5" fill="none"/><path d="M5 18v6c0 3.314 5.82 6 13 6s13-2.686 13-6v-6" stroke="#4169E1" stroke-width="1.5" fill="none"/></svg>
-            <span class="stack__label">PostgreSQL</span>
-          </div>
+                        <div class="stack__item">
+                            <svg
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <rect
+                                    x="5"
+                                    y="5"
+                                    width="26"
+                                    height="26"
+                                    rx="3"
+                                    stroke="#3178C6"
+                                    stroke-width="1.5"
+                                    fill="none"
+                                />
+                                <text
+                                    x="18"
+                                    y="24"
+                                    text-anchor="middle"
+                                    font-size="14"
+                                    font-weight="700"
+                                    fill="#3178C6"
+                                >
+                                    TS
+                                </text>
+                            </svg>
+                            <span class="stack__label">TypeScript</span>
+                        </div>
 
-          <div class="stack__item">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><circle cx="18" cy="18" r="14" stroke="#F38020" stroke-width="1.5" fill="none"/><path d="M12 12h12M12 18h12M12 24h12" stroke="#F38020" stroke-width="1.5" stroke-linecap="round"/></svg>
-            <span class="stack__label">Cloudflare</span>
-          </div>
+                        <div class="stack__item">
+                            <svg
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M18 3L3 12v12l15 9 15-9V12L18 3z"
+                                    stroke="#339933"
+                                    stroke-width="1.5"
+                                    fill="none"
+                                />
+                                <text
+                                    x="18"
+                                    y="23"
+                                    text-anchor="middle"
+                                    font-size="11"
+                                    font-weight="700"
+                                    fill="#339933"
+                                >
+                                    N
+                                </text>
+                            </svg>
+                            <span class="stack__label">Node.js</span>
+                        </div>
 
-          <div class="stack__item">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect x="4" y="8" width="28" height="20" rx="4" stroke="#1D63ED" stroke-width="1.5" fill="none"/><circle cx="18" cy="18" r="3" fill="#1D63ED"/><circle cx="28" cy="21" r="2" fill="#1D63ED"/><circle cx="8" cy="21" r="2" fill="#1D63ED"/></svg>
-            <span class="stack__label">Docker</span>
-          </div>
+                        <div class="stack__item">
+                            <svg
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M18 3L3 12v12l15 9 15-9V12L18 3z"
+                                    stroke="#646CFF"
+                                    stroke-width="1.5"
+                                    fill="none"
+                                />
+                                <text
+                                    x="18"
+                                    y="23"
+                                    text-anchor="middle"
+                                    font-size="10"
+                                    font-weight="700"
+                                    fill="#646CFF"
+                                >
+                                    V
+                                </text>
+                            </svg>
+                            <span class="stack__label">Vite</span>
+                        </div>
 
-          <div class="stack__item">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M18 4L4 14v8l14 10 14-10v-8L18 4z" stroke="#004D40" stroke-width="1.5" fill="none"/><path d="M18 12v12M8 17h20" stroke="#004D40" stroke-width="1.2"/><path d="M10 14l8 5 8-5" stroke="#004D40" stroke-width="1.2"/></svg>
-            <span class="stack__label">Midtrans</span>
-          </div>
+                        <div class="stack__item">
+                            <svg
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <ellipse
+                                    cx="18"
+                                    cy="12"
+                                    rx="13"
+                                    ry="6"
+                                    stroke="#4169E1"
+                                    stroke-width="1.5"
+                                    fill="none"
+                                />
+                                <path
+                                    d="M5 12v6c0 3.314 5.82 6 13 6s13-2.686 13-6v-6"
+                                    stroke="#4169E1"
+                                    stroke-width="1.5"
+                                    fill="none"
+                                />
+                                <path
+                                    d="M5 18v6c0 3.314 5.82 6 13 6s13-2.686 13-6v-6"
+                                    stroke="#4169E1"
+                                    stroke-width="1.5"
+                                    fill="none"
+                                />
+                            </svg>
+                            <span class="stack__label">PostgreSQL</span>
+                        </div>
 
-        </div>
-      </div>
-    </section>
+                        <div class="stack__item">
+                            <svg
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <circle
+                                    cx="18"
+                                    cy="18"
+                                    r="14"
+                                    stroke="#F38020"
+                                    stroke-width="1.5"
+                                    fill="none"
+                                />
+                                <path
+                                    d="M12 12h12M12 18h12M12 24h12"
+                                    stroke="#F38020"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                />
+                            </svg>
+                            <span class="stack__label">Cloudflare</span>
+                        </div>
 
-    <!-- ===== CONTACT ===== -->
-    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
-      <div class="section__inner">
-        <h2 class="section__title section__title--center" id="contact-title">Punya ide produk digital? Mari bicara.</h2>
-        <p class="section__sub">
-          Ceritakan kebutuhan Anda, kami bantu wujudkan.
-        </p>
-        <!-- TODO: ganti halo@dsiji.id dengan alamat email Dsiji yang sesungguhnya jika tersedia -->
-        <a href="mailto:halo@dsiji.id" class="btn btn--primary btn--lg">Email Kami</a>
+                        <div class="stack__item">
+                            <svg
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <rect
+                                    x="4"
+                                    y="8"
+                                    width="28"
+                                    height="20"
+                                    rx="4"
+                                    stroke="#1D63ED"
+                                    stroke-width="1.5"
+                                    fill="none"
+                                />
+                                <circle cx="18" cy="18" r="3" fill="#1D63ED" />
+                                <circle cx="28" cy="21" r="2" fill="#1D63ED" />
+                                <circle cx="8" cy="21" r="2" fill="#1D63ED" />
+                            </svg>
+                            <span class="stack__label">Docker</span>
+                        </div>
 
-        <div class="contact__social">
-          <p class="contact__social-label">Atau temui kami di</p>
-          <div class="contact__social-links">
-            <a href="https://instagram.com/dsiji_corp" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-              Instagram
-            </a>
-            <a href="https://www.facebook.com/Dsiji-104571762354979/" target="_blank" rel="noopener" aria-label="Facebook">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-              Facebook
-            </a>
-            <a href="https://www.linkedin.com/company/dsiji/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              LinkedIn
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+                        <div class="stack__item">
+                            <svg
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M18 4L4 14v8l14 10 14-10v-8L18 4z"
+                                    stroke="#004D40"
+                                    stroke-width="1.5"
+                                    fill="none"
+                                />
+                                <path
+                                    d="M18 12v12M8 17h20"
+                                    stroke="#004D40"
+                                    stroke-width="1.2"
+                                />
+                                <path
+                                    d="M10 14l8 5 8-5"
+                                    stroke="#004D40"
+                                    stroke-width="1.2"
+                                />
+                            </svg>
+                            <span class="stack__label">Midtrans</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <div class="footer__inner">
-        <div class="footer__links">
-          <a href="#portfolio">Portofolio</a>
-          <a href="#stack">Stack</a>
-          <a href="#contact">Kontak</a>
-        </div>
-        <div class="footer__social">
-          <a href="https://instagram.com/dsiji_corp" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="https://www.facebook.com/Dsiji-104571762354979/" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/company/dsiji/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-        </div>
-      </div>
-      <p class="footer__copy">&copy; Dsiji 2022&ndash;2026. All rights reserved.</p>
-    </footer>
+            <!-- ===== CONTACT ===== -->
+            <section
+                class="section section--contact"
+                id="contact"
+                aria-labelledby="contact-title"
+            >
+                <div class="section__inner">
+                    <h2
+                        class="section__title section__title--center"
+                        id="contact-title"
+                    >
+                        Punya ide produk digital? Mari bicara.
+                    </h2>
+                    <p class="section__sub">
+                        Ceritakan kebutuhan Anda, kami bantu wujudkan.
+                    </p>
+                    <!-- TODO: ganti halo@dsiji.id dengan alamat email Dsiji yang sesungguhnya jika tersedia -->
+                    <a
+                        href="mailto:halo@dsiji.id"
+                        class="btn btn--primary btn--lg"
+                        >Email Kami</a
+                    >
 
-  </main>
+                    <div class="contact__social">
+                        <p class="contact__social-label">Atau temui kami di</p>
+                        <div class="contact__social-links">
+                            <a
+                                href="https://instagram.com/dsiji_corp"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="Instagram"
+                            >
+                                <svg
+                                    width="22"
+                                    height="22"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect
+                                        x="2"
+                                        y="2"
+                                        width="20"
+                                        height="20"
+                                        rx="5"
+                                    />
+                                    <path
+                                        d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                                    />
+                                    <line
+                                        x1="17.5"
+                                        y1="6.5"
+                                        x2="17.51"
+                                        y2="6.5"
+                                    />
+                                </svg>
+                                Instagram
+                            </a>
+                            <a
+                                href="https://www.facebook.com/Dsiji-104571762354979/"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="Facebook"
+                            >
+                                <svg
+                                    width="22"
+                                    height="22"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                                    />
+                                </svg>
+                                Facebook
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/company/dsiji/"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="LinkedIn"
+                            >
+                                <svg
+                                    width="22"
+                                    height="22"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                                    />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-  <script src="js/main.js"></script>
-</body>
+            <!-- ===== FOOTER ===== -->
+            <footer class="footer">
+                <div class="footer__inner">
+                    <div class="footer__links">
+                        <a href="#portfolio">Portofolio</a>
+                        <a href="#stack">Stack</a>
+                        <a href="#contact">Kontak</a>
+                    </div>
+                    <div class="footer__social">
+                        <a
+                            href="https://instagram.com/dsiji_corp"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Instagram"
+                        >
+                            <svg
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    x="2"
+                                    y="2"
+                                    width="20"
+                                    height="20"
+                                    rx="5"
+                                />
+                                <path
+                                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                                />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                        <a
+                            href="https://www.facebook.com/Dsiji-104571762354979/"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Facebook"
+                        >
+                            <svg
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                                />
+                            </svg>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/company/dsiji/"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="LinkedIn"
+                        >
+                            <svg
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                                />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <p class="footer__copy">
+                    &copy; Dsiji 2022&ndash;2026. All rights reserved.
+                </p>
+            </footer>
+        </main>
+
+        <script src="js/main.js"></script>
+    </body>
 </html>
