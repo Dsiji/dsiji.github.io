@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Eggies",
+        "image": "assets/img/eggies.webp",
+        "alt": "Eggies, aplikasi operasional bisnis telur",
+        "description": "Aplikasi operasional bisnis telur: produksi, stok & batch, order, pengiriman, piutang, hingga traceability QR dalam satu alur kerja. Dipakai peternak di Sulawesi Selatan.",
+        "tag": "SaaS • Operasional",
+        "tenantNote": "Dipakai beberapa peternak sekaligus dalam satu platform berlangganan.",
+        "url": "https://eggies.halozy.my.id"
+    },
+    {
+        "title": "Fisky",
+        "image": "assets/img/fisky.webp",
+        "alt": "Fisky, sistem operasi budidaya lele",
+        "description": "Sistem operasi budidaya lele. Pantau kualitas air, pakan (FCR), biomassa, panen, dan keuangan dalam satu dashboard.",
+        "tag": "SaaS • Agritech",
+        "tenantNote": "Dipakai beberapa peternak sekaligus dalam satu platform berlangganan.",
+        "url": "https://fisky.halozy.my.id"
+    },
+    {
+        "title": "Breadest",
+        "image": "assets/img/breadest.webp",
+        "alt": "Breadest, web app untuk bisnis bakery",
+        "description": "Web app buat bisnis roti dan bakery: katalog produk, manajemen pesanan, dan riwayat pelanggan.",
+        "tag": "Web App • F&B",
+        "url": "https://breadest.halozy.my.id"
+    },
+    {
+        "title": "Rinra Trans",
+        "image": "assets/img/rinratrans.webp",
+        "alt": "Rinra Trans, platform tiket bus travel",
+        "description": "Platform tiket bus travel rute Makassar-Mamuju-Palopo-Mangkutana: cari jadwal, booking online, tracking armada, dan poin pelanggan.",
+        "tag": "Web App • Transportasi",
+        "url": "https://rinratrans.halozy.my.id"
+    },
+    {
+        "title": "Rostrenst",
+        "image": "assets/img/rostrenst.webp",
+        "alt": "Rostrenst, sewa sound system & multimedia",
+        "description": "Sewa sound system & multimedia untuk acara di Jakarta & sekitarnya. Dari presentasi kantor hingga gathering 200 orang — speaker jernih, proyektor terang, operator standby.",
+        "tag": "Web App • Rental",
+        "url": "https://rostrenst.halozy.my.id"
+    },
+    {
+        "title": "Space Labyrinth Vibration",
+        "image": "assets/img/space.webp",
+        "alt": "Space Labyrinth Vibration, sistem pembelian tiket event",
+        "description": "Sistem pembelian tiket untuk event musik SpaceTrip12: paket tiket bertingkat, galeri venue, dan registrasi online.",
+        "tag": "Web App • Event",
+        "url": "https://space.halozy.my.id"
+    },
+    {
+        "title": "Lilart",
+        "image": "assets/img/lilart.webp",
+        "alt": "Lilart, sablon kaos custom & konveksi Maros",
+        "description": "Landing page sablon kaos custom & konveksi di Maros — DTF, manual, bordir, jersey. Konsultasi desain, pemesanan, dan galeri dalam satu platform.",
+        "tag": "Web App • Konveksi",
+        "url": "https://lilart.halozy.my.id"
+    },
+    {
+        "title": "Throne Media",
+        "image": "assets/img/thronemedia.webp",
+        "alt": "Throne Media, arsip dokumentasi musik keras Makassar",
+        "description": "Media alternatif Makassar yang mengarsipkan musik keras Sulawesi sejak 2016. Live archive band & festival, drum cam vault, membership inner circle, toko, dan form kerja sama promotor.",
+        "tag": "Web App • Media",
+        "url": "https://thronemedia.halozy.my.id"
+    },
+    {
+        "title": "Rinet Physiotherapy",
+        "image": "assets/img/fisio.webp",
+        "alt": "Rinet Physiotherapy, klinik fisioterapi dengan portal pasien",
+        "description": "Website klinik fisioterapi: booking sesi online, portal pasien & staf, video latihan mandiri, artikel edukasi, dan manajemen terapis berlisensi di Jakarta.",
+        "tag": "Web App • Kesehatan",
+        "url": "https://fisio.halozy.my.id"
+    },
+    {
+        "title": "Halozy AC Services",
+        "image": "assets/img/jasain.webp",
+        "alt": "Halozy AC Services, SaaS manajemen kontraktor AC multi-tenant",
+        "description": "SaaS multi-tenant untuk kontraktor & toko AC: checkout wizard Email OTP, dispatch anti-bentrok PostgreSQL, PWA teknisi offline-first, dan dashboard tenant siap subdomain.",
+        "tag": "SaaS • Layanan",
+        "url": "https://jasain.halozy.my.id"
+    },
+    {
+        "title": "Heart to Earth",
+        "image": "assets/img/heart2earth.webp",
+        "alt": "Heart to Earth, sistem tiket event konservasi dan camping",
+        "description": "Sistem pemesanan tiket event konservasi & camping 2H1M di Kaki Gunung Bulu Saraung: paket tiket bertingkat, private camp, addon akomodasi, e-ticket, dan portal admin gate.",
+        "tag": "Web App • Event",
+        "url": "https://heart2earth.web.id"
+    }
+]

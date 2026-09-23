@@ -116,4 +116,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initial check
   updateActiveLink();
+
+  /* ──── Portfolio (data/portfolio.json) ──── */
+  var grid = document.getElementById('portfolioGrid');
+  if (grid) {
+    fetch('data/portfolio.json')
+      .then(function (r) { return r.json(); })
+      .then(function (items) {
+        grid.innerHTML = items.map(function (p) {
+          var note = p.tenantNote
+            ? '<p class="card__tenant-note">' + p.tenantNote + '</p>'
+            : '';
+          return (
+            '<article class="card">' +
+              '<div class="card__frame">' +
+                '<div class="card__frame-bar"><span></span><span></span><span></span></div>' +
+                '<img class="card__frame-img" src="' + p.image + '" alt="' + p.alt + '" loading="lazy" width="1200" height="750" />' +
+              '</div>' +
+              '<div class="card__body">' +
+                '<h3 class="card__title">' + p.title + '</h3>' +
+                '<p class="card__desc">' + p.description + '</p>' +
+                '<span class="card__tag">' + p.tag + '</span>' +
+                note +
+                '<a href="' + p.url + '" target="_blank" rel="noopener" class="btn btn--small btn--primary">Lihat Proyek</a>' +
+              '</div>' +
+            '</article>'
+          );
+        }).join('');
+      })
+      .catch(function () { /* data gagal dimuat, grid kosong */ });
+  }
 });
